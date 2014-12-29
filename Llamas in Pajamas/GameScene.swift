@@ -85,7 +85,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func addCharacters() {
         
         //TODO: Add characters to the scene
+        for i in 1..<4
+        {
+            let pj:Pajama = Pajama();
+            pj.pajamaColor = PajamaColor.red;
+            addPajama(pj);
+        }
         
+        for i in 1..<4
+        {
+            let pj:Pajama = Pajama();
+            pj.pajamaColor = PajamaColor.blue;
+            addPajama(pj);
+        }
+        
+        for i in 1..<4
+        {
+            let pj:Pajama = Pajama();
+            pj.pajamaColor = PajamaColor.yellow;
+            addPajama(pj);
+        }
+        
+        
+        let lion:Lion = Lion(runningSpeedInSeconds: 1.2);
+        lion.position = CGPointMake(60,100);
+        addChild(lion);
+        
+        let lion2:Lion = Lion(runningSpeedInSeconds: 1.2);
+        lion2.position = CGPointMake(60,200);
+        addChild(lion2);
     }
     
     func addPajama(pajama: Pajama) {
